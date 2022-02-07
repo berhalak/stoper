@@ -66,7 +66,8 @@ class Stoper {
   public toString() {
     let log = '';
     if (this.active) {
-      log += 'Time: ' + Duration.fromMillis(DateTime.now().toMillis() - this.current).toFormat('hh:mm:ss');
+      log += 'Time:    ' + Duration.fromMillis(DateTime.now().toMillis() - this.current).toFormat('hh:mm:ss');
+      log += '\nStarted: ' + DateTime.fromMillis(this.current).toFormat("DD HH:mm:ss");
     } else {
       log += 'Last:' + Duration.fromMillis(this.last).toFormat('hh:mm:ss');;
     }
